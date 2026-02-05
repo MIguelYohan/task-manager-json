@@ -101,14 +101,13 @@ class TaskManager:
         self._manager = []
 
     def see(self):
-        # Apenas para uso em aplicações no terminal.
         tasks = []
         for task in self._manager:
             tasks.append(
                 {
                     'text': task.text,
                     'date': task.date,
-                    'done': '✅' if task.done else '❌'
+                    'done': True if task.done else False
                 }
             )
         return tasks
